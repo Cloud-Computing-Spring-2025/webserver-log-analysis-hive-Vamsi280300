@@ -124,23 +124,23 @@ Step 1: Setup Hive Environment
 
 ```bash
 hive
-
+```
 Step 2: Create the Hive Table
 Run the table creation script in Hive.
 ```bash
 hdfs dfs -mkdir -p /user/hive/warehouse/web_logs
 hdfs dfs -put web_logs.csv /user/hive/warehouse/web_logs/
-
+```
 
 Step 3: Load the Web Logs into HDFS
 ```bash
 hdfs dfs -mkdir -p /user/hive/warehouse/web_logs
 hdfs dfs -put web_logs.csv /user/hive/warehouse/web_logs/
-
+```
 Step 4: Load Data into Hive Table
 ```bash
 LOAD DATA INPATH '/user/hive/warehouse/web_logs/web_logs.csv' INTO TABLE web_server_logs;
-
+```
 Step 5: Execute Queries
 Run the queries for analysis in Hive.
 
